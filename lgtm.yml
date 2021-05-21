@@ -1,9 +1,11 @@
+# sadly this doesn't work. I can't update the cmake. :/
+
 extraction:
   cpp:
-     prepare:
-        packages: 
-          - libboost-all-dev
-          - bison
-     index:
-        build_command:
-        - mkdir build && cd build && cmake .. && cmake --build . --config Release
+     configure:
+        command:
+        - uname -a
+        - apt-get update
+        - apt-get install -Y cmake
+        - cmake -v
+        - mkdir build && cd build && cmake .. && cmake --build .. --config Release
