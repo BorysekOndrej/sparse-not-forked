@@ -1,0 +1,9 @@
+extraction:
+  cpp:
+     prepare:
+        packages: 
+          - libboost-all-dev
+          - bison
+     index:
+        build_command:
+        - mkdir build && cd build && cmake .. && cmake --build . --config Release
